@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: #bb86fc;
+    margin-bottom: 30px;
+  }
+  
+  .prediction-form {
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-field {
+    width: 100%;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .form-field.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #121212;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #bb86fc;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .submit-button,
+  .back-button {
+    padding: 15px 20px;
+    background: #bb86fc;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .submit-button:hover,
+  .back-button:hover {
+    background: #3700b3;
+    transform: scale(1.05);
+  }
+  
+  .error-message {
+    color: #cf6679;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .prediction-result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #bb86fc;
+  }
+  
+  /* Keyframe animations for entrance effect */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Applying animations */
+  .form-field {
+    animation: slideIn 0.5s ease forwards;
+  }
+  
+  .prediction-form {
+    animation: fadeIn 1s ease forwards;
+  }
+  .placeholder-option {
+    display: none;
+  }
+  

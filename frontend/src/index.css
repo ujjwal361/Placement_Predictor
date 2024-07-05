@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.left-section h1 {
+  margin-right: 20px; 
+}
+.left-section h1:hover,
+.left-section h2:hover {
+  color: lightblue; 
+  cursor: pointer; 
+}
+
+.right-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.right-section li {
+  margin-right: 10px; 
+}
+
+.right-section li:last-child {
+  margin-right: 0;
+}
+.right-section li:hover {
+  background-color: lightblue; 
+  cursor: pointer; 
+}
+.second-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.second-navbar-left,
+.second-navbar-middle,
+.second-navbar-right {
+  flex: 1;
+}
+
+.second-navbar-right ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.second-navbar-right li {
+  margin-right: 10px;
+}
+
+.second-navbar-right li:last-child {
+  margin-right: 0;
+}
+
